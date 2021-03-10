@@ -35,10 +35,14 @@ test <- read.csv2("TPR.csv")
 head(test)
 
 #Afficher pour chacunes des régions le CA Total moyen
+test <- sort(data_part1$Region)
+str(test)
 
-#Partie 2 
-
-#Déterminer la paire de variables qui a le meilleur coef de corrél linéaire (« ProduitsFrais », « Lait », « Epicerie », « Surgele », « Detergents » et « Traiteur »)
+for (i in data_part1) {
+    print("CA Total moyen Region " + i)
+}
+region1 <- data_part1[data$Region]
+# r coef de corrél linéaire (« ProduitsFrais », « Lait », « Epicerie », « Surgele », « Detergents » et « Traiteur »)
 
 #Regression linéaire des deux paire de variable (Y par rapport à X et X par rapport à Y)
 
